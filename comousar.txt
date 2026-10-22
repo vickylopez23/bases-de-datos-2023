@@ -1,0 +1,25 @@
+// Comandos que uso para levantar las bases con Docker
+
+// --- MongoDB (docker-compose.yaml) ---
+
+// Levantar todos los contenedores del docker-compose:
+docker compose up -d
+
+// Bajar todos los contenedores del docker-compose:
+docker compose down
+
+// Entrar con bash al contenedor de mongo (la carpeta del repo queda montada en /app):
+docker compose exec mongo bash
+
+// Ya adentro, cargar la base mflix:
+mongorestore --gzip --db mflix /app/mflix
+
+// --- MySQL (docker-compose.yaml.mysql) ---
+
+// Lo mismo pero indicando el otro archivo:
+docker compose -f docker-compose.yaml.mysql up -d
+docker compose -f docker-compose.yaml.mysql exec mysql bash
+
+// Ya adentro, cargar una base (la contraseña de root es admin):
+mysql -uroot -padmin < /app/practico2/schema.sql
+mysql -uroot -padmin < /app/practico2/world-data.sql

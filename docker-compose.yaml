@@ -1,0 +1,11 @@
+# MongoDB para los prácticos 7 a 9 y el parcial 2.
+# La carpeta del repo queda montada en /app adentro del contenedor.
+version: "3"
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - .:/app/

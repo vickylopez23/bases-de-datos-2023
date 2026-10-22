@@ -1,0 +1,14 @@
+# MySQL 8 para los prácticos 2 a 6 y el parcial 1.
+# Se levanta con: docker compose -f docker-compose.yaml.mysql up -d
+# El usuario es root y la contraseña admin (es solo para practicar en local).
+version: "3"
+
+services:
+  mysql:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+    volumes:
+      - .:/app/
