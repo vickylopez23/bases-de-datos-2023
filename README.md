@@ -4,7 +4,5 @@ Entregas de la materia Bases de Datos de la Licenciatura en Ciencias de la Compu
 
 ## Contenido
 
-- `practicos/`: resoluciones en SQL de los prácticos 2, 3, 4 y 5.
-- `parciales/`: soluciones entregadas del primer parcial, su recuperatorio y el segundo parcial (archivos comprimidos `.xz` / `.tar.xz`, tal como se entregaron).
-
+Resoluciones que hice de parciales de la Materia
 Autora: Victoria López
